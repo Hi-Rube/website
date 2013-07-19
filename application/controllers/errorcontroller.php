@@ -3,7 +3,7 @@
  {
    public function init()
    {
-   	echo "<h1>Error</h1>";
+   	echo "<h1>Error!</h1>";
    }	
  }
   
