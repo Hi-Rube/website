@@ -27,9 +27,10 @@
    	  protected function getURLData()
    	  { 	  	
    	  	$this->_environment['host']=$_SERVER['HTTP_HOST'];
-   	  	$this->_environment['path']=$_SERVER['PHP_SELF'];
+   	  	$this->_environment['path']=$_SERVER['PATH_INFO'];
    	  	$operate=explode('/', $this->_environment['path']);
-   	  	if (strcmp($operate[count($operate)-2],"index.php")) 
+   	  	var_dump($operate);
+   	  	if (count($operate)==3) 
    	  	   {
    	  		 $this->_operating['action']=$operate[count($operate)-2];
    	  	   	 $this->_operating['method']=$operate[count($operate)-1];
