@@ -22,8 +22,13 @@ class Application {
 		$this->_environment ['host'] = $_SERVER ['HTTP_HOST'];
 		$path = explode ( '?', $_SERVER ['REQUEST_URI'] );
 		$this->_environment ['path'] = $path [0];
+		 if ($this->_environment ['path'][strlen($this->_environment ['path'])-1]=='/')
+		   	$this->_environment['path']=substr($this->_environment['path'], 0,strlen($this->_environment ['path'])-1);
 		$operate = explode ( '/', $this->_environment ['path'] );
-		if (strcmp($operate[count ( $operate )-3], "index.php")==0) {
+		if (count ( $operate ) == 3) {
+			$this->_operating ['action'] = $operate [count ( $operate ) - 2];
+			$this->_operating ['method'] = $operate [count ( $operate ) - 1];
+		} else if (strcmp ( $operate [count ( $operate ) - 3], "index.php" ) == 0) {
 			$this->_operating ['action'] = $operate [count ( $operate ) - 2];
 			$this->_operating ['method'] = $operate [count ( $operate ) - 1];
 		} else {
