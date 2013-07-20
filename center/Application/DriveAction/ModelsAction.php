@@ -3,7 +3,7 @@
   {
   	public function MysqlStart()
   	{
-  		$this->start('mysql');
+  		$this->start('Mysql');
   	}
   	public function connectByConfig()
   	{

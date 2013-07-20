@@ -3,6 +3,9 @@
   {
   	public function init()
   	{
+  		$this->includeSqlFile('rube');
+  		$i=new rube();
+  		echo $i->connectByConfig();
   		echo "HIRUBE!";
   	}
   	
@@ -11,9 +14,7 @@
   		$this->loadView('index');
   		$this->renderArray($variable=array('ok'=>'Rube'));
   		$this->display();
-  		$this->includeSqlFile('rube');
-  		$i=new rube();
-  		echo $i->connectByConfig();
+  		
   	}
   	
   	public function e()
