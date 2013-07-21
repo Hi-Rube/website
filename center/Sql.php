@@ -11,10 +11,30 @@ class Sql {
 	public function getSql() {
 		return $this->sql;
 	}
-	public function connectSql($sqlName, $username, $password) {
-		return $this->sql->connectSql ( $sqlName, $username, $password );
+	public function connectSql($sqlName, $username, $password,$dbname) {
+		return $this->sql->connectSql ( $sqlName, $username, $password ,$dbname);
 	}
 	public function sqlorder($order) {
 		return $this->sql->sqlorder ( $order );
+	}
+	public function connectsqlSafe($sqlName,$username,$password,$dbname)
+	{
+		$this->sql->connectsqlSafe($sqlName,$username,$password,$dbname);
+	}
+	public function connectsqlSafeExec($order)
+	{
+		$this->sql->connectsqlSafeExec($order);
+	}
+	public function connectsqlSafePrepare($order)
+	{
+	    $this->sql->connectsqlSafePrepare($order);
+	}
+	public function connectsqlSafeExecute()
+	{
+		return $this->sql->connectsqlSafeExecute();
+	}
+	public function connectsqlSafeBindParam($parameter,$variable)
+	{
+		$this->sql->connectsqlSafeBindParam($parameter,$variable);
 	}
 }
