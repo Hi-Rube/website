@@ -1,15 +1,35 @@
 <html>
 <head>
- <script>
-    alert('<?php echo $this->ok; ?>');
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="../css/index.css" rel="stylesheet" />
+<link href="../css/include/footer_include.css" rel="stylesheet" />
+<link href="../css/include/title_include.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/index/index.js">
  </script>
 </head>
- <body>
-   <form action="index/e?i=2" method="post">
-    <input name='a' type='text'>
-	<input type='submit'>
-   </form>
-   <h1>ok<?php echo $this->ok;?></h1>
-   <img src="/images/12.jpg"/>
- </body>
- </html> 
+<body>
+	<div id="CEN">
+	  <?php include_once APPLICATION_PATH.'/views/include/title_include.phtml'; ?>
+		<div id="activity">
+			<div id="a_left"></div>
+			<div id="a_right">
+				<div id="slide_page">
+				   <div><img src="../images/4.jpg" /></div>
+				   <div><img src="../images/3.jpg" /></div>
+				   <div><img src="../images/2.jpg" /></div>
+				   <div><img src="../images/1.jpg" /></div>					
+				</div>
+			</div>
+			<div id="select_item">
+			   <a class='a_item_number' id="number1" onmouseover="mouseover(1)" onmouseout="mouseout(1)">1</a>
+			   <a class='a_item_number' id="number2" onmouseover="mouseover(2)" onmouseout="mouseout(2)">2</a>
+			   <a class='a_item_number' id="number3" onmouseover="mouseover(3)" onmouseout="mouseout(3)">3</a>
+			   <a class='a_item_number' id="number4" onmouseover="mouseover(4)" onmouseout="mouseout(4)">4</a>
+			</div>
+		</div>
+	<?php include_once APPLICATION_PATH.'/views/include/footer_include.phtml'; ?>
+	</div>
+</body>
+</html>

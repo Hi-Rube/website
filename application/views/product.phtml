@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="../css/product.css" rel="stylesheet" />
+<link href="../css/include/footer_include.css" rel="stylesheet" />
+<link href="../css/include/title_include.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/product/index.js">
+</script>
+<script type="text/javascript" src="../js/product/selected_pro.js">
+</script>
+</head>
+<body>
+	<div id="CEN">
+	  <?php include_once APPLICATION_PATH.'/views/include/title_include.phtml'; ?>
+	   <div id="activity">
+			<div id="Scroll" onselectstart="return false"
+				onmousewheel="ScrollWheel()">
+				<div id="ScroLeft">
+                <?php for ($i=1; $i<=9; $i++) if ($i % 3==1){?>
+	                    <div id="content<?php echo $i;?>" class="pro">
+						<div>
+							<img id="img<?php echo $i;?>" src="../images/1.jpg">
+						</div>
+						<div class="pro_msg">
+							<div class="pro_msg_left" id="msg<?php echo $i;?>">随心选聚享餐(航海王版)</div>
+							<div class="pro_msg_right">
+								¥ <a id="price<?php echo $i;?>">7.23</a>起
+							</div>
+						</div>
+						<div class="pro_selected" onclick="select(<?php echo $i;?>)">加入购物车</div>
+					</div>
+					<div id="content<?php echo $i+1;?>" class="pro">
+						<div>
+							<img id="img<?php echo $i+1;?>" src="../images/1.jpg">
+						</div>
+						<div class="pro_msg">
+							<div class="pro_msg_left" id="msg<?php echo $i+1;?>">随心选聚享餐(航海王版)</div>
+							<div class="pro_msg_right">
+								¥ <a id="price<?php echo $i+1;?>">3.33</a>起
+							</div>
+						</div>
+						<div class="pro_selected" onclick="select(<?php echo $i+1;?>)">加入购物车</div>
+					</div>
+					<div id="content<?php echo $i+2;?>" class="pro">
+						<div>
+							<img id="img<?php echo $i+2;?>" src="../images/2.jpg">
+						</div>
+						<div class="pro_msg">
+							<div class="pro_msg_left" id="msg<?php echo $i+2;?>">随心选聚享餐(航海王版)</div>
+							<div class="pro_msg_right">
+								¥ <a id="price<?php echo $i+2;?>">1.23</a>起
+							</div>
+						</div>
+						<div class="pro_selected" onclick="select(<?php echo $i+2;?>)">加入购物车</div>
+					</div>
+	           <?php }?>
+                   </div>
+				<div id="ScroRight" onclick="ScroNow(event)">
+					<div id="ScroLine" OnMouseDown="ScroMove()"></div>
+				</div>
+			</div>
+			<div id="a_right">
+				<div id="select_title">购物车</div>
+				<div id="summary_price">
+					总价:<a id="sum_number">0.00</a>
+				</div>
+				<div id="select_content"></div>
+				<div id="summary" onmouseover="summaryover()"
+					onmouseout="summaryout()" onclick="sendajax()">结算</div>
+			</div>
+		</div>
+	  <?php include_once APPLICATION_PATH.'/views/include/footer_include.phtml'; ?>
+	</div>
+</body>
+</html>

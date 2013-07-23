@@ -1,0 +1,19 @@
+#title_top {
+	width: 100%; 
+	height: 45px;
+	background-image: url("../../images/title_top.jpg");
+}
+
+#title_mid {
+	width: 100%;
+	background-image: url("../../images/title_mid.jpg");
+	height: 30px;
+	word-break: break-all;
+	margin-bottom: 20px;
+}
+
+#pro_item {
+	width: 100%;
+	height: 50px;
+	background-color: #008F6B;
+}

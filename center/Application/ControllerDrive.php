@@ -11,7 +11,7 @@ class ControllerDrive {
 		if (class_exists ( $action . 'controller' )) {
 			$class = new ReflectionClass ( $action . 'controller' );
 			$instance = $class->newInstance ();
-			if (method_exists ( $instance, $method )) {
+			if (method_exists ( $instance, $method."Action" )) {
 				return 1;
 			} else
 				return 0;
@@ -33,7 +33,7 @@ class ControllerDrive {
 				$instance = $this->class->newInstance ();
 				$instanceMethod = $this->class->getMethod ( 'init' );
 				$instanceMethod->invoke ( $instance );
-				$instanceMethod = $this->class->getMethod ( $method );
+				$instanceMethod = $this->class->getMethod ( $method."Action" );
 				$instanceMethod->invoke ( $instance );
 			} else {
 				$this->errorOperate ();

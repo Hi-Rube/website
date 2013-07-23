@@ -6,8 +6,10 @@
   		
   	}
   	
-  	public function index()
+  	public function indexAction()
   	{
+  		$this->loadView("index");
+  		$this->display();
   	}
   }
   
